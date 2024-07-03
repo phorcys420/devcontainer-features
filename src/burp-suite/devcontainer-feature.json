@@ -1,0 +1,31 @@
+{
+    "name": "Burp Suite",
+    "id": "burp-suite",
+    "version": "1.0.0",
+    "description": "A feature that installs Burp Suite",
+    "keywords": ["burp", "burp-suite", "security"],
+    "options": {
+        "edition": {
+            "type": "string",
+            "proposals": [
+                "community",
+                "pro"
+            ],
+            "default": "community",
+            "description": "Select the Burp Suite edition"
+        },
+
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "2024.5.5"
+            ],
+            "description": "Select the Burp Suite version"
+        }
+    },
+
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

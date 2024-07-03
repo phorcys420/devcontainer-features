@@ -1,0 +1,12 @@
+{
+    "burp-suite": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        
+        "features": {
+            "burp-suite": {
+                "edition": "community",
+                "version": "latest"
+            }
+        }
+    }
+}
