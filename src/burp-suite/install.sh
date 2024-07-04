@@ -30,7 +30,7 @@ if [ $VERSION = "latest" ]; then
 fi
 
 TMP=$(mktemp -d)
-DESTINATION_FILE="$TMP/burp_install"
+DESTINATION_FILE="$TMP/burp_install.sh"
 
 echo "[burp-suite] [+] Downloading version $CURRENT_VERSION"
 curl --get \
