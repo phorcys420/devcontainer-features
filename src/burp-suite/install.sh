@@ -2,7 +2,7 @@
 
 echo "Activating feature 'burp-suite'"
 
-set -e
+set -euo pipefail
 
 EDITION=${VERSION:-community}
 VERSION=${VERSION:-latest}
@@ -25,7 +25,7 @@ check_packages curl ca-certificates jq sudo
 if [ $VERSION = "latest" ]; then
   echo "[burp-suite] [+] Grabbing the latest Burp version"
 
-  RELEASE_DATA=$(curl 'https://portswigger.net/burp/releases/data?previousLastId=-1&lastId=-1&pageSize=1' -sS)
+  RELEASE_DATA=$(curl 'https://portswigger.net/burp/releases/data?previousLastId=-1&lastId=-1&pageSize=1' --silent --show-error)
   VERSION=$(echo -n "$RELEASE_DATA" | jq -r '.ResultSet.Results[0].version')
 fi
 
@@ -33,12 +33,12 @@ TMP=$(mktemp -d)
 DESTINATION_FILE="$TMP/burp_install.sh"
 
 echo "[burp-suite] [+] Downloading version $CURRENT_VERSION"
-curl --get \
-  -o "$DESTINATION_FILE" \
+curl --location --silent --show-error \
   --data-urlencode "product=$EDITION" \
   --data-urlencode "version=$CURRENT_VERSION" \
   --data-urlencode "type=Linux" \
-   "https://portswigger-cdn.net/burp/releases/download"
+  --output "$DESTINATION_FILE" \
+  "https://portswigger-cdn.net/burp/releases/download"
 
 chmod +x "$DESTINATION_FILE"
 
