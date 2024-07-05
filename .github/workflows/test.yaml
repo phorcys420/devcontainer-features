@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - burp-suite
+          - ghidra
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -34,6 +34,7 @@ jobs:
       matrix:
         features:
           - burp-suite
+          - ghidra
     steps:
       - uses: actions/checkout@v3
 
