@@ -11,6 +11,7 @@
                 "latest",
                 "Ghidra_11.1.1_build"
             ],
+            "default": "latest",
             "description": "Select the Ghidra version (either 'latest' or a GitHub release tag)"
         },
 
@@ -19,6 +20,7 @@
             "proposals": [
                 "NationalSecurityAgency/ghidra"
             ],
+            "default": "NationalSecurityAgency/ghidra",
             "description": "Define the repository to grab"
         }
     },
