@@ -22,7 +22,7 @@ check_packages() {
   fi
 }
 
-check_packages libarchive-tools curl jq
+check_packages curl ca-certificates jq libarchive-tools
 
 if [ $VERSION_TAG = "latest" ]; then
     RELEASE_API_URL="https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/latest"
