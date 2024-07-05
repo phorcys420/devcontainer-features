@@ -1,0 +1,33 @@
+{
+    "name": "Ghidra",
+    "id": "ghidra",
+    "version": "1.0.0",
+    "description": "A feature that installs Ghidra",
+    "keywords": ["ghidra", "reverse-engineering", "security"],
+    "options": {
+        "version_tag": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "Ghidra_11.1.1_build"
+            ],
+            "description": "Select the Ghidra version (either 'latest' or a GitHub release tag)"
+        },
+
+        "repository": {
+            "type": "string",
+            "proposals": [
+                "NationalSecurityAgency/ghidra"
+            ],
+            "description": "Define the repository to grab"
+        }
+    },
+
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+
+    "dependsOn": [
+        "ghcr.io/devcontainers/features/github-cli:1"
+    ]
+}
