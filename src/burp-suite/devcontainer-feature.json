@@ -21,6 +21,7 @@
                 "latest",
                 "2024.5.5"
             ],
+            "default": "latest",
             "description": "Select the Burp Suite version"
         }
     },
