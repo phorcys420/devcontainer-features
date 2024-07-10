@@ -12,7 +12,7 @@ BASE_DIR=${BASEDIR:-"/usr/share/phorcys-devcontainer-libraries"}
 
 # Grab current feature version and split it in parts
 VERSION=$(getFeatureVersion)
-VERSION_PARTS=$(getVersionParts "$VERSION_PARTS")
+VERSION_PARTS=$(getVersionParts "$VERSION")
 
 # Define the installation directory for the current feature and the current feature version
 FEATURE_DIR="$BASE_DIR/$FEATURE_NAME"
