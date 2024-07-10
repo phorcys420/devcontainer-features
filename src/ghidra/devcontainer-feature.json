@@ -5,7 +5,7 @@
     "description": "A feature that installs Ghidra",
     "keywords": ["ghidra", "reverse-engineering", "security"],
     "options": {
-        "version_tag": {
+        "version": {
             "type": "string",
             "proposals": [
                 "latest",

@@ -5,7 +5,7 @@ echo "Activating feature 'ghidra'"
 set -euo pipefail
 
 REPOSITORY=${REPOSITORY:-NationalSecurityAgency/ghidra}
-VERSION_TAG=${VERSION_TAG:-latest}
+VERSION=${VERSION:-latest}
 
 INSTALL_DIR=${INSTALL_DIR:-/opt/ghidra}
 
@@ -24,10 +24,10 @@ check_packages() {
 
 check_packages curl ca-certificates jq libarchive-tools
 
-if [ $VERSION_TAG = "latest" ]; then
+if [ $VERSION = "latest" ]; then
     RELEASE_API_URL="https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/latest"
 else
-    RELEASE_API_URL="https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/tags/$VERSION_TAG"
+    RELEASE_API_URL="https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/tags/$VERSION"
 fi
 
 ASSET_URL=$(curl "$RELEASE_API_URL" --silent --show-error | jq -r ".assets[0].browser_download_url")
@@ -35,7 +35,7 @@ ASSET_URL=$(curl "$RELEASE_API_URL" --silent --show-error | jq -r ".assets[0].br
 TMP=$(mktemp -d)
 DESTINATION_FILE="$TMP/ghidra.zip"
 
-echo "[ghidra] [+] Downloading version with tag $VERSION_TAG"
+echo "[ghidra] [+] Downloading version with tag $VERSION"
 
 curl --location --silent --show-error \
   --output "$DESTINATION_FILE" \
