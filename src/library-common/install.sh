@@ -5,8 +5,14 @@ set -euo pipefail
 FEATURE_NAME="common"
 echo "Activating feature '$FEATURE_NAME'"
 
+source src/main.sh
+
 # Define the base directory where the feature libraries are stored
 BASE_DIR=${BASEDIR:-"/usr/share/phorcys-devcontainer-libraries"}
+
+# Grab current feature version and split it in parts
+VERSION=$(getFeatureVersion)
+VERSION_PARTS=$(getVersionParts "$VERSION_PARTS")
 
 # Define the installation directory for the current feature and the current feature version
 FEATURE_DIR="$BASE_DIR/$FEATURE_NAME"
