@@ -9,7 +9,7 @@ echo "Activating feature '$FEATURE_NAME'"
 BASE_DIR=${BASEDIR:-"/usr/share/phorcys-devcontainer-libraries"}
 
 # Source lib-common feature
-source "$BASE_DIR/common/main.sh"
+source "$BASE_DIR/common/1/main.sh"
 
 # Grab current feature version and split it in parts
 VERSION=$(getFeatureVersion)
