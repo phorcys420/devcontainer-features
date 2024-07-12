@@ -27,5 +27,10 @@
 
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
-    ]
+    ],
+
+    "dependsOn": {
+        "ghcr.io/phorcys420/devcontainer-features/lib-common:1": {},
+        "ghcr.io/phorcys420/devcontainer-features/lib-github:1": {}
+    }
 }
