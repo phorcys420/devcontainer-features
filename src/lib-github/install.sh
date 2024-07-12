@@ -8,6 +8,8 @@ echo "Activating feature '$FEATURE_NAME'"
 # Define the base directory where the feature libraries are stored
 BASE_DIR=${BASEDIR:-"/usr/share/phorcys-devcontainer-libraries"}
 
+find /usr/share/phorcys-devcontainer-libraries/common
+
 # Source lib-common feature
 source "$BASE_DIR/common/1/main.sh"
 
