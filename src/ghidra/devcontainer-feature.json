@@ -1,7 +1,7 @@
 {
     "name": "Ghidra",
     "id": "ghidra",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A feature that installs Ghidra",
     "keywords": ["ghidra", "reverse-engineering", "security"],
     "options": {
@@ -27,5 +27,10 @@
 
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
-    ]
+    ],
+
+    "dependsOn": {
+        "ghcr.io/phorcys420/devcontainer-features/lib-common:1": {},
+        "ghcr.io/phorcys420/devcontainer-features/lib-github:1": {}
+    }
 }
