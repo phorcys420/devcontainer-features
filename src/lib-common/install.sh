@@ -25,8 +25,8 @@ cp --recursive src/. "$INSTALL_DIR"
 
 # Make links to each subversion (e.g if version is 1.0.0, then link to 1.0 and 1) and "current"
 SUBFOLDERS=(
-    "${VERSION_PARTS[0]}.${VERSION_PARTS[1]}", # 1.0
-    "${VERSION_PARTS[0]}", # 1
+    "${VERSION_PARTS[0]}.${VERSION_PARTS[1]}" # 1.0
+    "${VERSION_PARTS[0]}" # 1
     "current"
 )
 
