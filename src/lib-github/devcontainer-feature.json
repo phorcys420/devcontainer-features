@@ -1,0 +1,22 @@
+{
+    "name": "Library - GitHub",
+    "id": "lib-github",
+    "version": "1.0.0",
+    "description": "A feature that contains utilities to fetch releases from GitHub",
+    "keywords": ["library"],
+    "options": {
+        "baseDir": {
+            "type": "string",
+            "default": "/usr/share/phorcys-devcontainer-libraries",
+            "description": "Select the base directory where the library should be installed"
+        }
+    },
+
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+
+    "dependsOn": {
+        "ghcr.io/phorcys420/devcontainer-features/lib-common:1": {}
+    }
+}

@@ -15,6 +15,7 @@ jobs:
         features:
           - ghidra
           - lib-common
+          - lib-github
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -37,6 +38,7 @@ jobs:
           - burp-suite
           - ghidra
           - lib-common
+          - lib-github
     steps:
       - uses: actions/checkout@v3
 
