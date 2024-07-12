@@ -21,7 +21,7 @@
                 "NationalSecurityAgency/ghidra"
             ],
             "default": "NationalSecurityAgency/ghidra",
-            "description": "Define the repository to grab"
+            "description": "Define the repository to grab releases from"
         }
     },
 
