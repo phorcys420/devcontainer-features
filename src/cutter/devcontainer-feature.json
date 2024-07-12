@@ -1,0 +1,36 @@
+{
+    "name": "Cutter",
+    "id": "cutter",
+    "version": "1.0.0",
+    "description": "A feature that installs Cutter",
+    "keywords": ["cutter", "reverse-engineering", "security"],
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "v2.3.4"
+            ],
+            "default": "latest",
+            "description": "Select the Cutter version (either 'latest' or a GitHub release tag)"
+        },
+
+        "repository": {
+            "type": "string",
+            "proposals": [
+                "rizinorg/cutter"
+            ],
+            "default": "rizinorg/cutter",
+            "description": "Define the repository to grab releases from"
+        }
+    },
+
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+
+    "dependsOn": {
+        "ghcr.io/phorcys420/devcontainer-features/lib-common:1": {},
+        "ghcr.io/phorcys420/devcontainer-features/lib-github:1": {}
+    }
+}

@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - cutter
           - ghidra
           - lib-common
           - lib-github
@@ -36,6 +37,7 @@ jobs:
       matrix:
         features:
           - burp-suite
+          - cutter
           - ghidra
           - lib-common
           - lib-github
