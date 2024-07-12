@@ -39,8 +39,7 @@ curl --get --location --silent --show-error --fail \
 # Make temporary directory accessible to all users
 chmod +rx "$TMP" -R
 
-echo "[$FEATURE_NAME] [+] Installing Burp CE"
-_REMOTE_USER="coder"
+echo "[$FEATURE_NAME] [+] Installing Burp $EDITION edition"
 sudo -u "$_REMOTE_USER" "$DESTINATION_FILE" -q # $_REMOTE_USER_HOME
 
 rm -rf "$TMP"
