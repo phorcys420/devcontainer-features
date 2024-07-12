@@ -16,7 +16,7 @@ A feature that installs Ghidra
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | version | Select the Ghidra version (either 'latest' or a GitHub release tag) | string | latest |
-| repository | Define the repository to grab | string | NationalSecurityAgency/ghidra |
+| repository | Define the repository to grab releases from | string | NationalSecurityAgency/ghidra |
 
 
 
