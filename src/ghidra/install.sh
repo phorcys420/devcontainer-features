@@ -27,7 +27,7 @@ DESTINATION_FILE="$TMP/ghidra.zip"
 
 echo "[$FEATURE_NAME] [+] Downloading version with tag $VERSION"
 
-curl --location --silent --show-error \
+curl --get --location --silent --show-error --fail \
     --output "$DESTINATION_FILE" \
     "$ASSET_URL"
 
