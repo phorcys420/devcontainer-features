@@ -36,8 +36,6 @@ curl --get --location --silent --show-error --fail \
   --output "$DESTINATION_FILE" \
   "https://portswigger-cdn.net/burp/releases/download"
 
-cat "$DESTINATION_FILE"
-
 # Make temporary directory accessible to all users
 chmod +rx "$TMP" -R
 
