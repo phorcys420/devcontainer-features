@@ -12,7 +12,7 @@ source "/usr/share/phorcys-devcontainer-libraries/common/1/main.sh"
 checkPackages curl ca-certificates jq sudo
 
 # Load options
-EDITION=${VERSION:-community}
+EDITION=${EDITION:-community}
 VERSION=${VERSION:-latest}
 
 if [ $VERSION = "latest" ]; then
@@ -27,7 +27,7 @@ fi
 TMP=$(mktemp -d)
 DESTINATION_FILE="$TMP/burp_install.sh"
 
-echo "[$FEATURE_NAME] [+] Downloading version $VERSION $EDITION"
+echo "[$FEATURE_NAME] [+] Downloading version $EDITION $VERSION"
 
 curl --get --location --silent --show-error --fail \
   --data-urlencode "product=$EDITION" \
@@ -39,7 +39,7 @@ curl --get --location --silent --show-error --fail \
 # Make temporary directory accessible to all users
 chmod +rx "$TMP" -R
 
-echo "[$FEATURE_NAME] [+] Installing Burp $EDITION edition"
+echo "[$FEATURE_NAME] [+] Installing Burp $EDITION"
 sudo -u "$_REMOTE_USER" "$DESTINATION_FILE" -q # $_REMOTE_USER_HOME
 
 rm -rf "$TMP"
