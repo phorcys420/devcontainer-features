@@ -1,0 +1,2 @@
+> [!NOTE]
+> This feature installs it's own JDK following the [official requirements](https://ghidra-sre.org/InstallationGuide.html#Requirements) using the [`java` feature](https://github.com/devcontainers/features/tree/main/src/java)
