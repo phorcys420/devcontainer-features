@@ -31,6 +31,10 @@
 
     "dependsOn": {
         "ghcr.io/phorcys420/devcontainer-features/lib-common:1": {},
-        "ghcr.io/phorcys420/devcontainer-features/lib-github:1": {}
+        "ghcr.io/phorcys420/devcontainer-features/lib-github:1": {},
+
+        "ghcr.io/devcontainers/features/java:1": {
+            "jdkDistro": "tem"
+        }
     }
 }
