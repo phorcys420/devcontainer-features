@@ -22,6 +22,12 @@
             ],
             "default": "rizinorg/cutter",
             "description": "Define the repository to grab releases from"
+        },
+
+        "extractAppImage": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether or not to extract the AppImage's contents"
         }
     },
 
