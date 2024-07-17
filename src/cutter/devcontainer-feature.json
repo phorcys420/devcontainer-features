@@ -26,7 +26,7 @@
 
         "extractAppImage": {
             "type": "boolean",
-            "default": "true",
+            "default": true,
             "description": "Whether or not to extract the AppImage's contents"
         }
     },
