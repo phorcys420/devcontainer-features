@@ -37,7 +37,7 @@ chmod +x "$DESTINATION_FILE"
 
 mkdir -p "$INSTALL_DIR"
 
-if[ "$EXTRACT_APPIMAGE" = "true"]; then
+if [ "$EXTRACT_APPIMAGE" = "true" ]; then
     pushd "$TMP"
 
     echo "[$FEATURE_NAME] [+] Extracting AppImage"
