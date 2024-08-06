@@ -1,5 +1,5 @@
 {
-    "name": "Ghidra",
+    "name": "Ghidra (via GitHub Releases)",
     "id": "ghidra",
     "version": "1.0.1",
     "description": "A feature that installs Ghidra",

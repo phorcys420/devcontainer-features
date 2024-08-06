@@ -1,5 +1,5 @@
 {
-    "name": "Burp Suite",
+    "name": "Burp Suite (via Portswigger CDN)",
     "id": "burp-suite",
     "version": "1.0.3",
     "description": "A feature that installs Burp Suite",
