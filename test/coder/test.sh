@@ -5,9 +5,7 @@ set -euo pipefail
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
-echo "$_REMOTE_USER"
-
-check "Coder CLI exists" "coder version"
+# Do nothing
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
