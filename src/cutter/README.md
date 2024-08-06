@@ -1,5 +1,5 @@
 
-# Cutter (cutter)
+# Cutter (via GitHub Releases) (cutter)
 
 A feature that installs Cutter
 
@@ -17,9 +17,13 @@ A feature that installs Cutter
 |-----|-----|-----|-----|
 | version | Select the Cutter version (either 'latest' or a GitHub release tag) | string | latest |
 | repository | Define the repository to grab releases from | string | rizinorg/cutter |
+| extractAppImage | Whether or not to extract the AppImage's contents | boolean | true |
 
-> [!WARNING]
-> AppImages require FUSE to run by default, you can either run `cutter --appimage-extract-and-run` to extract the AppImage instead of using FUSE.
+> [!NOTE]
+> Cutter only provides AppImages for Linux, and AppImages require FUSE to run.
+> By default, this feature extracts the contents of the AppImage.
+> If for some reason, you don't want this behavior, you can set `extractAppImage` to `false`.
+> To run cutter, run `cutter --appimage-extract-and-run` to extract the AppImage instead of using FUSE.
 > Otherwise, you'll have to grant more privileges to your container, either by adding `SYS_ADMIN` to `capAdd` or by setting `privileged` to `true` in your `devcontainer.json` file.
 
 ---
