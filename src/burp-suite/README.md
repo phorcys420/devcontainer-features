@@ -1,5 +1,5 @@
 
-# Burp Suite (burp-suite)
+# Burp Suite (via Portswigger CDN) (burp-suite)
 
 A feature that installs Burp Suite
 

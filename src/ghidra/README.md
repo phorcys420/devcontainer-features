@@ -1,5 +1,5 @@
 
-# Ghidra (ghidra)
+# Ghidra (via GitHub Releases) (ghidra)
 
 A feature that installs Ghidra
 
@@ -18,7 +18,8 @@ A feature that installs Ghidra
 | version | Select the Ghidra version (either 'latest' or a GitHub release tag) | string | latest |
 | repository | Define the repository to grab releases from | string | NationalSecurityAgency/ghidra |
 
-
+> [!NOTE]
+> This feature installs it's own JDK following the [official requirements](https://ghidra-sre.org/InstallationGuide.html#Requirements) using the [`java` feature](https://github.com/devcontainers/features/tree/main/src/java)
 
 ---
 
