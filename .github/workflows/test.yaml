@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - coder
           - cutter
           - ghidra
           - lib-common
@@ -36,6 +37,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - coder
           - burp-suite
           - cutter
           - ghidra
