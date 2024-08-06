@@ -1,0 +1,26 @@
+{
+    "name": "Coder (via installation script)",
+    "id": "coder",
+    "version": "1.0.0",
+    "description": "A feature that installs Coder",
+    "keywords": ["coder"],
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select the Coder version"
+        }
+    },
+
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/desktop-lite"
+    ],
+
+    "dependsOn": {
+        "ghcr.io/phorcys420/devcontainer-features/lib-common:1": {}
+    }
+}
