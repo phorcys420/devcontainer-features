@@ -1,7 +1,7 @@
 {
     "name": "Library - GitHub",
     "id": "lib-github",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A feature that contains utilities to fetch releases from GitHub",
     "keywords": ["library"],
 

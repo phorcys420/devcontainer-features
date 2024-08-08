@@ -1,7 +1,7 @@
 {
     "name": "Library - Common",
     "id": "lib-common",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A feature that contains the commonly used functions in devcontainer features to avoid rewriting code",
     "keywords": ["library"],
 
