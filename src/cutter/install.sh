@@ -5,11 +5,9 @@ set -euo pipefail
 FEATURE_NAME="cutter"
 echo "Activating feature '$FEATURE_NAME'"
 
-LIBRARY_FOLDER="/usr/share/phorcys-devcontainer-libraries"
-
-# Source lib-common and lib-github features
-source "$LIBRARY_FOLDER/common/1/main.sh"
-source "$LIBRARY_FOLDER/github/1/main.sh"
+# Source lib-common and lib-github features (DEVCONTAINER_LIBRARIES_HOME is defined by lib-common)
+source "$DEVCONTAINER_LIBRARIES_HOME/common/1/main.sh"
+source "$DEVCONTAINER_LIBRARIES_HOME/github/1/main.sh"
 
 # Load options
 REPOSITORY=${REPOSITORY:-rizinorg/cutter}
