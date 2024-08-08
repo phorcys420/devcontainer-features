@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-FEATURE_NAME="common"
+LIBRARY_NAME="common"
+FEATURE_NAME="lib-$LIBRARY_NAME"
 echo "Activating feature '$FEATURE_NAME'"
 
 source src/main.sh
@@ -15,8 +16,8 @@ VERSION=$(getFeatureVersion)
 VERSION_PARTS=($(getVersionParts "$VERSION"))
 
 # Define the installation directory for the current feature and the current feature version
-FEATURE_DIR="$BASE_DIR/$FEATURE_NAME"
-INSTALL_DIR="$FEATURE_DIR/$VERSION"
+LIBRARY_DIR="$BASE_DIR/$LIBRARY_NAME"
+INSTALL_DIR="$LIBRARY_DIR/$VERSION"
 
 # Create directory for current feature version
 echo "[$FEATURE_NAME] [+] Installing library to $INSTALL_DIR"
@@ -32,5 +33,5 @@ SUBFOLDERS=(
 
 for SUBFOLDER in "${SUBFOLDERS[@]}"
 do
-    ln --symbolic --force "$INSTALL_DIR" "$FEATURE_DIR/$SUBFOLDER"
+    ln --symbolic --force "$INSTALL_DIR" "$LIBRARY_DIR/$SUBFOLDER"
 done
