@@ -9,7 +9,8 @@ echo "Activating feature '$FEATURE_NAME'"
 source src/main.sh
 
 # Define the base directory where the feature libraries are stored
-BASE_DIR=${BASEDIR:-"/usr/share/phorcys-devcontainer-libraries"}
+# DEVCONTAINER_LIBRARIES_HOME is defined in the containerEnv value of the feature's manifest
+BASE_DIR=${DEVCONTAINER_LIBRARIES_HOME:-"/usr/share/phorcys-devcontainer-libraries"}
 
 # Grab current feature version and split it in parts
 VERSION=$(getFeatureVersion)

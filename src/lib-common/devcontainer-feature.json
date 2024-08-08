@@ -4,12 +4,9 @@
     "version": "1.0.0",
     "description": "A feature that contains the commonly used functions in devcontainer features to avoid rewriting code",
     "keywords": ["library"],
-    "options": {
-        "baseDir": {
-            "type": "string",
-            "default": "/usr/share/phorcys-devcontainer-libraries",
-            "description": "Select the base directory where the library should be installed"
-        }
+
+    "containerEnv": {
+        "DEVCONTAINER_LIBRARIES_HOME": "/usr/share/phorcys-devcontainer-libraries"
     },
 
     "installsAfter": [

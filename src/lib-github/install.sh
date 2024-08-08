@@ -7,7 +7,8 @@ FEATURE_NAME="lib-$LIBRARY_NAME"
 echo "Activating feature '$FEATURE_NAME'"
 
 # Define the base directory where the feature libraries are stored
-BASE_DIR=${BASEDIR:-"/usr/share/phorcys-devcontainer-libraries"}
+# DEVCONTAINER_LIBRARIES_HOME is defined in the containerEnv value of lib-common's manifest
+BASE_DIR=${DEVCONTAINER_LIBRARIES_HOME:-"/usr/share/phorcys-devcontainer-libraries"}
 
 # Source lib-common feature
 source "$BASE_DIR/common/1/main.sh"
