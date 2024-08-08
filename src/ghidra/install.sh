@@ -15,7 +15,8 @@ source "$LIBRARY_FOLDER/github/1/main.sh"
 REPOSITORY=${REPOSITORY:-NationalSecurityAgency/ghidra}
 VERSION=${VERSION:-latest}
 
-INSTALL_DIR=${INSTALL_DIR:-/opt/ghidra}
+# GHIDRA_HOME is defined in the containerEnv value of the feature's manifest
+GHIDRA_HOME=${GHIDRA_HOME:-/opt/ghidra}
 
 # Check for dependencies
 checkPackages curl ca-certificates jq libarchive-tools
@@ -31,11 +32,11 @@ curl --get --location --silent --show-error --fail \
     --output "$DESTINATION_FILE" \
     "$ASSET_URL"
 
-mkdir -p "$INSTALL_DIR"
+mkdir -p "$GHIDRA_HOME"
 
-echo "[$FEATURE_NAME] [+] Extracting to $INSTALL_DIR"
+echo "[$FEATURE_NAME] [+] Extracting to $GHIDRA_HOME"
 
-# Extract the archive by stripping the first directory so that we don't end up with a subfolder (e.g ghidra_11.1.1_PUBLIC_20240614) in $INSTALL_DIR 
-bsdtar --strip-components=1 -xf "$DESTINATION_FILE" -C "$INSTALL_DIR"
+# Extract the archive by stripping the first directory so that we don't end up with a subfolder (e.g ghidra_11.1.1_PUBLIC_20240614) in $GHIDRA_HOME 
+bsdtar --strip-components=1 -xf "$DESTINATION_FILE" -C "$GHIDRA_HOME"
 
 rm -rf "$TMP"

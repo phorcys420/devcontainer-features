@@ -17,7 +17,8 @@ VERSION=${VERSION:-latest}
 
 EXTRACT_APPIMAGE=${EXTRACTAPPIMAGE:-"true"}
 
-INSTALL_DIR=${INSTALL_DIR:-/opt/cutter}
+# CUTTER_HOME is defined in the containerEnv value of the feature's manifest
+CUTTER_HOME=${CUTTER_HOME:-/opt/cutter}
 
 # Check for dependencies
 checkPackages curl ca-certificates jq libarchive-tools
@@ -35,7 +36,7 @@ curl --get --location --silent --show-error --fail \
 
 chmod +x "$DESTINATION_FILE"
 
-mkdir -p "$INSTALL_DIR"
+mkdir -p "$CUTTER_HOME"
 
 if [ "$EXTRACT_APPIMAGE" = "true" ]; then
     pushd "$TMP"
@@ -46,12 +47,12 @@ if [ "$EXTRACT_APPIMAGE" = "true" ]; then
     shopt -s dotglob nullglob
 
     # When extracting the AppImage, it creates a squashfs-root subdirectory
-    mv squashfs-root/* "$INSTALL_DIR/"
+    mv squashfs-root/* "$CUTTER_HOME/"
 
     # Rename the "AppRun" binary to "cutter"
-    mv "$INSTALL_DIR/AppRun" "$INSTALL_DIR/cutter"
+    mv "$CUTTER_HOME/AppRun" "$CUTTER_HOME/cutter"
 
     popd
 else
-    mv "$DESTINATION_FILE" "$INSTALL_DIR/"
+    mv "$DESTINATION_FILE" "$CUTTER_HOME/"
 fi
