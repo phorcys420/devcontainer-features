@@ -1,7 +1,7 @@
 {
     "name": "Cutter (via GitHub Releases)",
     "id": "cutter",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A feature that installs Cutter",
     "keywords": ["cutter", "reverse-engineering", "security"],
     "options": {

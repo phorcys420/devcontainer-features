@@ -1,7 +1,7 @@
 {
     "name": "Coder (via installation script)",
     "id": "coder",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A feature that installs Coder",
     "keywords": ["coder"],
     "options": {

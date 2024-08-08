@@ -1,7 +1,7 @@
 {
     "name": "Burp Suite (via Portswigger CDN)",
     "id": "burp-suite",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A feature that installs Burp Suite",
     "keywords": ["burp", "burp-suite", "security"],
     "options": {
