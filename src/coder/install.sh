@@ -29,9 +29,9 @@ chmod +rx "$TMP" -R
 echo "[$FEATURE_NAME] [+] Installing Coder"
 
 if [ $VERSION = "latest" ]; then
-  sudo -u "$_REMOTE_USER" "$DESTINATION_FILE"
+  "$DESTINATION_FILE"
 else
-  sudo -u "$_REMOTE_USER" "$DESTINATION_FILE" --version "$VERSION"
+  "$DESTINATION_FILE" --version "$VERSION"
 fi
 
 rm -rf "$TMP"
