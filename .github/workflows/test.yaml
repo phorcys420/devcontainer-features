@@ -63,13 +63,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        features:
-          - burp-suite
-          - coder
-          - cutter
-          - ghidra
-          - lib-common
-          - lib-github
+        features: ${{ fromJSON(needs.changes.outputs.features) }}
     steps:
       - uses: actions/checkout@v4
 
