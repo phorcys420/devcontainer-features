@@ -1,6 +1,8 @@
 # Dev Container Features
 
+- [Android SDK](https://github.com/phorcys420/devcontainer-features/tree/main/src/android-sdk)
 - [Burp Suite](https://github.com/phorcys420/devcontainer-features/tree/main/src/burp-suite)
+- [Coder](https://github.com/phorcys420/devcontainer-features/tree/main/src/coder)
 - [Cutter](https://github.com/phorcys420/devcontainer-features/tree/main/src/cutter)
 - [Ghidra](https://github.com/phorcys420/devcontainer-features/tree/main/src/ghidra)
 
