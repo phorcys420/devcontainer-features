@@ -1,0 +1,51 @@
+{
+    "name": "Android SDK (via Google CDN)",
+    "id": "android-sdk",
+    "version": "1.0.0",
+    "description": "A feature that installs the Android command line tools and SDK",
+    "keywords": ["android", "mobile", "mobile-development"],
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "11076708"
+            ],
+            "default": "11076708",
+            "description": "Select the Android command line tools version ('latest' is not supported)"
+        },
+
+        "installMavenRepos": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether or not to install the Android and Google Maven repos"
+        },
+
+        "installPlayServices": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether or not to install Play Services"
+        },
+
+        "installEmulator": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether or not to install the Android Emulator (NOTE: you still have to install the images yourself using sdkmanager)"
+        }
+    },
+
+    "containerEnv": {
+        "ANDROID_HOME": "/usr/local/android-sdk",
+        "ANDROID_CMDLINE_TOOLS_HOME": "${ANDROID_HOME}/cmdline-tools",
+        "PATH": "${PATH}:${ANDROID_HOME}:${ANDROID_CMDLINE_TOOLS_HOME}/latest/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools"
+    },
+
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+
+    "dependsOn": {
+        "ghcr.io/phorcys420/devcontainer-features/lib-common:1": {},
+
+        "ghcr.io/devcontainers/features/java:1": {}
+    }
+}

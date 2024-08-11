@@ -20,6 +20,9 @@ jobs:
       id: filter
       with:
         filters: |
+          android-sdk:
+            - src/android-sdk/**
+            - test/android-sdk/**
           burp-suite:
             - src/burp-suite/**
             - test/burp-suite/**
