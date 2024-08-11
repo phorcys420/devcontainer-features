@@ -16,10 +16,10 @@ EDITION=${EDITION:-community}
 VERSION=${VERSION:-latest}
 
 # CUTTER_HOME is defined in the containerEnv value of the feature's manifest
-BURP_HOME=${BURP_HOME:-/opt/burp}
+BURP_HOME=${BURP_HOME:-/opt/burp-suite}
 
 if [ $VERSION = "latest" ]; then
-  echo "[$FEATURE_NAME] [+] Grabbing the latest Burp version"
+  echo "[$FEATURE_NAME] [+] Grabbing the latest Burp Suite version"
 
   RELEASE_DATA=$(curl 'https://portswigger.net/burp/releases/data?previousLastId=-1&lastId=-1&pageSize=5' --silent --show-error --fail)
 
@@ -42,7 +42,7 @@ curl --get --location --silent --show-error --fail \
 # Make temporary directory accessible to all users
 chmod +rx "$TMP" -R
 
-echo "[$FEATURE_NAME] [+] Installing Burp $EDITION"
+echo "[$FEATURE_NAME] [+] Installing Burp Suite $EDITION edition"
 "$DESTINATION_FILE" -q -dir "$BURP_HOME" -overwrite
 
 rm -rf "$TMP"

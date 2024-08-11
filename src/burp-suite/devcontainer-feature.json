@@ -27,7 +27,7 @@
     },
 
     "containerEnv": {
-        "BURP_HOME": "/opt/burp",
+        "BURP_HOME": "/opt/burp-suite",
         "PATH": "${PATH}:${BURP_HOME}"
     },
 
