@@ -14,6 +14,7 @@ jobs:
       matrix:
         features:
           - android-sdk
+          - burp-suite
           - coder
           - cutter
           - ghidra
@@ -39,8 +40,9 @@ jobs:
       matrix:
         features:
           - android-sdk
-          - coder
           - burp-suite
+          - coder
+          - coder
           - cutter
           - ghidra
           - lib-common
