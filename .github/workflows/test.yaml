@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - android-sdk
           - burp-suite
           - coder
           - cutter
@@ -38,7 +39,9 @@ jobs:
     strategy:
       matrix:
         features:
+          - android-sdk
           - burp-suite
+          - coder
           - coder
           - cutter
           - ghidra
