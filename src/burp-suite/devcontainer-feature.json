@@ -26,6 +26,11 @@
         }
     },
 
+    "containerEnv": {
+        "BURP_HOME": "/opt/burp",
+        "PATH": "${PATH}:${BURP_HOME}"
+    },
+
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/desktop-lite"

@@ -8,12 +8,15 @@ echo "Activating feature '$FEATURE_NAME'"
 # Source lib-common feature
 source "/usr/share/phorcys-devcontainer-libraries/common/1/main.sh"
 
-# Check for dependencies
-checkPackages curl ca-certificates jq sudo
+# Check for dependencies (libfreetype6 is only really needed to run in CI, otherwise you would always have this library if you have the desktop-lite feature)
+checkPackages curl ca-certificates jq sudo libfreetype6
 
 # Load options
 EDITION=${EDITION:-community}
 VERSION=${VERSION:-latest}
+
+# CUTTER_HOME is defined in the containerEnv value of the feature's manifest
+BURP_HOME=${BURP_HOME:-/opt/burp}
 
 if [ $VERSION = "latest" ]; then
   echo "[$FEATURE_NAME] [+] Grabbing the latest Burp version"
@@ -40,6 +43,6 @@ curl --get --location --silent --show-error --fail \
 chmod +rx "$TMP" -R
 
 echo "[$FEATURE_NAME] [+] Installing Burp $EDITION"
-sudo -u "$_REMOTE_USER" "$DESTINATION_FILE" -q # $_REMOTE_USER_HOME
+"$DESTINATION_FILE" -q -dir "$BURP_HOME" -overwrite
 
 rm -rf "$TMP"
