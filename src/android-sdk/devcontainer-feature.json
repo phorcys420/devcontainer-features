@@ -1,7 +1,7 @@
 {
     "name": "Android SDK (via Google CDN)",
     "id": "android-sdk",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A feature that installs the Android command line tools and SDK",
     "keywords": ["android", "mobile", "mobile-development"],
     "options": {
